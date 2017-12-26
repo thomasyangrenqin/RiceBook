@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 62.0.3202 (Mac OS X 10.12.6)" package="" timestamp="2017-10-29T21:03:54" id="0" hostname="yrqs-MacBook-Pro.local" tests="28" errors="0" failures="0" time="2.246">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="0.106" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).AppComponent"/>
+  <testcase name="AppComponent should have as title 'app'" time="0.044" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).AppComponent"/>
+  <testcase name="ArticleComponent should create" time="0.107" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="ArticlesService should be created" time="0.012" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ArticlesService"/>
+  <testcase name="BirthdateDirective should create an instance" time="0" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).BirthdateDirective"/>
+  <testcase name="LandingComponent should create" time="0.209" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).LandingComponent"/>
+  <testcase name="LandingService should be created" time="0.015" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).LandingService"/>
+  <testcase name="PasswordDirective should create an instance" time="0" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).PasswordDirective"/>
+  <testcase name="MainComponent should create" time="0.112" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainComponent"/>
+  <testcase name="MainService should be created" time="0.012" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).MainService"/>
+  <testcase name="ProfileComponent should create" time="0.136" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileService should be created" time="0.019" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).ProfileService"/>
+  <testcase name="Validate resource actions resource should be a resource (i.e., mock a request)" time="0.635" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Validate resource actions resource should give me the http error" time="0.12" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Validate resource actions resource should be POSTable" time="0.119" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Validate resource actions should update error message (for displaying error mesage to user)" time="0.004" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Validate resource actions should update success message (for displaying success message to user)" time="0.003" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Validate resource actions should navigate (to profile, main, or landing)" time="0.004" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate resource actions"/>
+  <testcase name="Articles View (component tests) should render articles" time="0.046" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Articles View (component tests)"/>
+  <testcase name="Articles View (component tests) should dispatch actions to create a new article" time="0.058" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Articles View (component tests)"/>
+  <testcase name="Validate Authentication (involves mocked requests) should log in a user" time="0.062" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Authentication (involves mocked requests)"/>
+  <testcase name="Validate Authentication (involves mocked requests) should not log in an invalid user" time="0.059" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Authentication (involves mocked requests)"/>
+  <testcase name="Validate Authentication (involves mocked requests) should log out a user (state should be cleared)" time="0.128" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Authentication (involves mocked requests)"/>
+  <testcase name="Validate Article actions should fetch articles (mocked request)" time="0.003" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Article actions"/>
+  <testcase name="Validate Article actions should filter displayed articles by the search keyword" time="0.003" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Article actions"/>
+  <testcase name="Validate Article actions should update the search keyword" time="0.003" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Article actions"/>
+  <testcase name="Validate Profile actions (mocked requests) should fetch the user's proile information" time="0.223" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Profile actions (mocked requests)"/>
+  <testcase name="Validate Profile actions (mocked requests) should update headline" time="0.004" classname="Chrome_62_0_3202_(Mac_OS_X_10_12_6).Validate Profile actions (mocked requests)"/>
+  <system-out>
+    <![CDATA[Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [], closed: false, isStopped: false, hasError: false, thrownError: null, _value: function UserInfo(){ ... }}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'GET headlines Unauthorized'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'GET somethingWrong Not Found'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [...], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) WARN: 'Could not find Angular Material core theme. Most Material components may not work as expected. For more info refer to the theming guide: https://material.angular.io/guide/theming'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) LOG: Observable{_isScalar: false, source: BehaviorSubject{_isScalar: false, observers: [...], closed: false, isStopped: false, hasError: false, thrownError: null, _value: []}}
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'POST login Unauthorized'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'GET articles Unauthorized'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'Unhandled Promise rejection:', 'Unauthorized', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', Error{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'Error: Unauthorized
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/src/test/testResource.ts:29:19
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:392:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/proxy.js:79:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:391:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.run (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:142:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:873:1
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:425:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/proxy.js:103:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:424:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.runTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:192:1)'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'GET articles/fl23 Unauthorized'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'Unhandled Promise rejection:', 'Unauthorized', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', Error{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'Error: Unauthorized
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/src/test/testResource.ts:29:19
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:392:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/proxy.js:79:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:391:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.run (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:142:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:873:1
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:425:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/proxy.js:103:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:424:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.runTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw5/ricebook/node_modules/zone.js/dist/zone.js:192:1)'
+,Chrome 62.0.3202 (Mac OS X 10.12.6) ERROR: 'GET accountName Not Found'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.581" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-11-17T04:18:28" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Validate Article functionality" timestamp="2017-11-17T04:18:28" tests="1" file="/Users/yangrenqin/Desktop/COMP531/backend/src/articles.spec.js" failures="0" time="0.397">
+    <testcase name="Validate Article functionality GET and count the current number of articles, POST a new article, verify you get back what you added, then GET again and count the number verifying it increased by one" time="0.397" classname="GET and count the current number of articles, POST a new article, verify you get back what you added, then GET again and count the number verifying it increased by one">
+    </testcase>
+  </testsuite>
+  <testsuite name="Validate profile functionality" timestamp="2017-11-17T04:18:29" tests="1" file="/Users/yangrenqin/Desktop/COMP531/backend/src/profile.spec.js" failures="0" time="0.184">
+    <testcase name="Validate profile functionality GET, PUT to change the value, GET to verify it was changed" time="0.184" classname="GET, PUT to change the value, GET to verify it was changed">
+    </testcase>
+  </testsuite>
+</testsuites>

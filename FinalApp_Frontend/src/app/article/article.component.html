@@ -1,0 +1,66 @@
+<div class="container" >
+  <div class="addBar">
+    <div class="inputRow">
+      <input class="inputItem" type="file" id="addImg" value="Select Image">
+      <input class="inputItem" type="text" id="addText" placeholder="type your post here">
+    </div>
+    <br>
+    <div class="buttonRow">
+      <button class="inputButton" id="addArticle" (click) = "addArticle()">Post</button>
+      <button class="inputButton" id="clearArea" (click) = "clearText()">Cancel</button>
+    </div>
+  </div>
+  <mat-card class="searchBar">
+    <mat-card-actions>
+      <input type="text" class="searchField" id="search" placeholder="search by author or content" #newSearch
+      (keyup)="searchArticles(newSearch.value)">
+    </mat-card-actions>
+  </mat-card>     
+  <div class="articles" *ngFor="let siteArticle of siteArticles | async">
+      <mat-card class="article">
+        <mat-card-header>
+          <mat-card-title id="author">{{siteArticle.author}}</mat-card-title>
+          <mat-card-subtitle>{{siteArticle.date}}</mat-card-subtitle>
+        </mat-card-header>
+        <img md-card-image *ngIf="siteArticle.img" src="{{siteArticle.img}}" alt="image not availble">
+        <mat-card-content>
+          <p>{{siteArticle.text}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button md-button class="btnEditArticle" (click) = "IseditableArticle(siteArticle.author, siteArticle.date)">EDIT</button>
+          <div class="IseditableArticle" *ngIf="((siteEditArticle | async)[siteArticle.author+siteArticle.date]) && ((siteEditArticle | async)[siteArticle.author+siteArticle.date] == true)">
+            <div class="errorEditArticle" *ngIf="me != siteArticle.author">You cannot edit others post</div>
+            <div class="editArticle" *ngIf="me == siteArticle.author">
+              <textarea id={{siteArticle.author}}+{{siteArticle.date}} class="textarea">{{siteArticle.text}}</textarea>
+              <button md-button class="btnSubmit" (click) = "editArticle(siteArticle.author, siteArticle.date, siteArticle._id)">submit</button>
+            </div>
+          </div>
+          <button md-button (click) = "displayComments(siteArticle.author, siteArticle.date)">SHOW COMMENT</button>
+          <div class="ifcomments" *ngIf="((siteComments | async)[siteArticle.author+siteArticle.date]) && ((siteComments | async)[siteArticle.author+siteArticle.date] == true)">
+            <div class="comments" *ngFor="let comments of siteArticle.comments">
+              <mat-card>
+              <mat-card-title style="font-size: 90%">{{comments.author}}</mat-card-title>
+              <mat-card-subtitle>{{comments.date}}</mat-card-subtitle>
+              <p>{{comments.text}}</p>
+              <button md-button (click) = "IseditableComment(comments.author, comments.date)">EDIT COMMENT</button>
+              <div class="IseditableComment" *ngIf="((siteEditComment | async)[comments.author+comments.date]) && ((siteEditComment | async)[comments.author+comments.date] == true)">
+                <div class="errorEditComment" *ngIf="me != comments.author">You cannot edit others comment</div>
+                <div class="editComment" *ngIf="me == comments.author">
+                 <textarea id={{comments.author}}+{{comments.date}} class="textarea">{{comments.text}}</textarea>
+                  <button md-button (click) = "editComment(comments.author, comments.date, siteArticle._id, comments._id)">submit</button>
+                </div>
+              </div>
+            </mat-card>
+              <br>
+            </div>
+          </div>
+          <button md-button (click) = "IsAddComment(siteArticle.author, siteArticle.date)">ADD COMMENT</button>
+          <div class="IsAddComment" *ngIf="((siteAddComment | async)[siteArticle.author+siteArticle.date]) && ((siteAddComment | async)[siteArticle.author+siteArticle.date] == true)">
+              <textarea id={{siteArticle.author}}+{{siteArticle.date}}+c class="textarea"></textarea>
+              <button md-button (click) = "addComment(siteArticle.author, siteArticle.date, siteArticle._id)">Add</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+      <br>
+  </div>
+</div>

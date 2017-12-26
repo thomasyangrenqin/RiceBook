@@ -1,0 +1,118 @@
+<div class="row">
+	<div class="column">
+		<mat-card>
+			<button md-button routerLink="/main" routerLinkActive="active">Main Page</button>
+			<h2>Current Image</h2>
+			<img md-card-image src="{{(message$ | async).img}}" alt="image not availble" id="imgDisplay"><br>
+			<input class="inputItem" type="file" id="addImg" value="Select Image">
+      <button class="inputButton" id="btnAddImg" (click) = "changeImg()">Submit</button>
+		</mat-card>
+	</div>
+	<div class="column">
+		<h2>Welcome to RiceBook</h2>
+		<img md-card-image src="../data/rice.png" alt="image not availble">
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+		<mat-card class="currentInfo">
+			<h2>Current Info</h2>
+			<mat-card-content>
+				<label>Account Name: </label>
+				<label id="accountName">{{(message$ | async).account_name}}</label><br>
+				<br>
+				<label>Email Address: </label>
+				<label id="emailAddress">{{(message$ | async).email_address}}</label><br>
+				<br>
+				<label>Birth date: </label>
+				<label id="dob">{{(message$ | async).dob}}</label><br>
+				<br>
+				<label>Zipcode: </label>
+				<label id="zipCode">{{(message$ | async).zipcode}}</label><br>
+				<br>
+				<label>Password: </label>
+				<label id="passWord">{{(message$ | async).password}}</label><br>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div class="column">
+		<mat-card class="updateInfo">
+		<h2>Update Info</h2>
+		<mat-card-actions>
+			<form #newUserForm='ngForm' (ngSubmit)="OnSubmit()">
+        		<div class="form-group">
+        			<label for="email_address">Email Address</label><br>
+        			<input id="email_address" name="email_address" class="form-control"
+		            placeholder="name@xxx.com" 
+               		required email
+               		[(ngModel)]="newUser.email_address" #email_address="ngModel" >
+
+        			<div *ngIf="email_address.invalid && (email_address.dirty || email_address.touched)" class="alert alert-danger">
+
+          				<div *ngIf="email_address.errors.required">
+            			Email address is required.
+          				</div>
+          				<div *ngIf="email_address.errors.email">
+            			Format is wrong.
+          				</div>
+        			</div>
+        		</div><br>
+
+				<div class="form-group">
+        			<label for="zipcode">Zipcode</label><br>
+        			<input id="zipcode" name="zipcode" class="form-control"
+               		placeholder="77005"
+               		required pattern="^\d{5}"
+               		[(ngModel)]="newUser.zipcode" #zipcode="ngModel" >
+
+        			<div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)" class="alert alert-danger">
+
+          				<div *ngIf="zipcode.errors.required">
+            				Zipcode is required.
+          				</div>
+          				<div *ngIf="zipcode.errors.pattern">
+            			Format is wrong.
+          				</div>
+        			</div>
+        		</div><br>
+
+				<div class="form-group">
+        			<label for="password">Password</label><br>
+        			<input id="password" name="password" type="password" class="form-control"
+               		required [(ngModel)]="newUser.password" #password="ngModel" >
+
+        			<div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+
+          				<div *ngIf="password.errors.required">
+            			Password is required.
+          				</div>
+        			</div>
+        		</div><br>
+
+        		<div class="form-group">
+        			<label for="password_confirm">Password Confirmation</label><br>
+        			<input id="password_confirm" name="password_confirm" type="password" class="form-control"
+            	   required PasswordCheck
+            	   [(ngModel)]="newUser.password_confirm" #password_confirm="ngModel" >
+
+        			<div *ngIf="password_confirm.invalid && (password_confirm.dirty || password_confirm.touched)" class="alert alert-danger">
+
+          				<div *ngIf="password_confirm.errors.required">
+            			Password Confirmation is required.
+          				</div>
+          				<div *ngIf="password_confirm.errors.PasswordCheck">
+            			Please check that you've entered and confirmed your password!
+          				</div>
+        			</div>
+        		</div><br>
+
+
+				    <button type="submit" class="btn btn-default" id="btnSubmit" 
+              		[disabled]="newUserForm.invalid">Submit</button>
+      			<button type="button" class="btn btn-default"
+              		(click)="newUserForm.resetForm({})">Reset</button>
+			</form>
+		</mat-card-actions>
+	</mat-card>
+	</div>
+</div>

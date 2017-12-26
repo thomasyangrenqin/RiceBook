@@ -1,0 +1,45 @@
+
+<div class="container">     
+  	<div class="column" id="main_part">
+  		<div class="row">
+    	  <mat-card class="user">
+        	<mat-card-actions>
+          	<button md-button id="btnLogout" routerLink="/landing" routerLinkActive="active" (click) = "logOut()">Log Out</button>
+          	<button md-button id="btnProfile"  (click) = "ToProfile()">Profile</button>
+        	</mat-card-actions>
+        	<mat-card-header>
+          	<mat-card-title>{{(siteUser$ | async).name}}</mat-card-title>
+          	<mat-card-subtitle class="statusInfo">{{(siteUser$ | async).status}}</mat-card-subtitle>
+        	</mat-card-header>
+        	<img md-card-image *ngIf="(siteUser$ | async).img" src="{{(siteUser$ | async).img}}" alt="image not availble">
+          <mat-card-actions>
+            <input type="text" id="newStatus" placeholder="update your status here!">
+            <button md-button class="btnUpdate" (click) = "updateStatus()">Update</button>
+          </mat-card-actions>
+      	</mat-card>
+  		</div>
+  		<br>
+  		<div class="row" *ngFor="let siteFollower of siteFollowers | async">
+    	  <mat-card class="followers">
+        	<mat-card-header>
+          	<mat-card-title>{{siteFollower.name}}</mat-card-title>
+          	<mat-card-subtitle>{{siteFollower.status}}</mat-card-subtitle>
+        	</mat-card-header>
+        	<img md-card-image *ngIf="siteFollower.img" src="{{siteFollower.img}}" alt="image not availble">
+        	<mat-card-actions>
+          	<button md-button class="btnUnfollow" (click) = "unFollow(siteFollower)">Unfollow</button>
+        	</mat-card-actions>
+      	</mat-card>
+  		</div>
+      <mat-card class="addFriends">
+        <mat-card-actions>
+  		    <input type="text" id="addFollower" placeholder="Add new friends here!">
+		      <button class="btnAdd" (click) = "addFollower()">Add</button>
+        </mat-card-actions>
+      </mat-card>
+      <div *ngIf="error | async">The follower is not exisit</div>
+  	</div>
+  	<div class="column" id="article_part">
+    	<app-article></app-article>
+  	</div>
+</div>

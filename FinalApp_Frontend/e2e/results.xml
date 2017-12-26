@@ -1,0 +1,45 @@
+
+> ricebook@0.0.0 e2e /Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw6/ricebook
+> ng e2e "xunit"
+
+** NG Live Development Server is listening on localhost:49152, open your browser on http://localhost:49152/ **
+[0mDate: [1m[37m2017-11-17T02:31:34.537Z[39m[22m[0m
+[0mHash: [1m[37m56f1c12852700aa3f9cf[39m[22m[0m
+[0mTime: [1m[37m16021[39m[22mms[0m
+[0mchunk {[1m[33minline[39m[22m} [1m[32minline.bundle.js, inline.bundle.js.map[39m[22m (inline) 5.83 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js, main.bundle.js.map[39m[22m (main) 4.84 MB {[1m[33minline[39m[22m} [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills.bundle.js, polyfills.bundle.js.map[39m[22m (polyfills) 217 kB {[1m[33minline[39m[22m} [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mstyles[39m[22m} [1m[32mstyles.bundle.js, styles.bundle.js.map[39m[22m (styles) 191 kB {[1m[33minline[39m[22m} [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+[20:31:34] I/update - chromedriver: file exists /Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw6/ricebook/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.33.zip
+[20:31:34] I/update - chromedriver: unzipping chromedriver_2.33.zip
+[20:31:35] I/update - chromedriver: setting permissions to 0755 for /Users/yangrenqin/Desktop/COMP531/ry13_git/comp431_531/hw6/ricebook/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.33
+[20:31:35] I/update - chromedriver: chromedriver_2.33 up to date
+[20:31:35] I/launcher - Running 1 instances of WebDriver
+[20:31:35] I/direct - Using ChromeDriver directly...
+Jasmine started
+
+  LandingPage test
+    [32m✓ should login as test user[39m
+    [32m✓ Register new user[39m
+    [32m✓ Should logout[39m
+
+  ArticlePage test
+    [32m✓ Create new article and validate article appears in feed[39m
+    [32m✓ Edit an article and validate changed article text[39m
+    [32m✓  Search for "Only One Article Like This" article and verify author[39m
+
+  MainPage test
+    [32m✓ Update headline headline and verify change[39m
+    [32m✓ Add the 'Follower' user and verify following count increases by on[39m
+    [32m✓ Remove the Follower user and verify following count decreases by one, test should be safe, i.e., what if Follower is not being followed[39m
+
+  ProfilePage test
+    [32m✓  Update user email and verify[39m
+    [32m✓ Update user zipcode and verify[39m
+    [32m✓ Update user password and verify[39m
+
+Executed 12 of 12 specs[32m SUCCESS[39m in 23 secs.
+[20:32:00] I/launcher - 0 instance(s) of WebDriver still running
+[20:32:00] I/launcher - chrome #01 passed

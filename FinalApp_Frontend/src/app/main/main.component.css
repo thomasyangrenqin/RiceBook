@@ -1,0 +1,16 @@
+.column {
+    display: table-cell;
+    padding: 16px;
+}
+.container {
+    display: table;
+    width: 100%;
+}
+
+#main_part {
+	width: 30%;
+}
+
+#article_part {
+	width: 70%;
+}

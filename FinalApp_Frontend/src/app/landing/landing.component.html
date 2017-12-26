@@ -1,0 +1,183 @@
+<h1>RiceBook</h1>
+
+<div class="container">
+  <div class="column">
+	<mat-card>
+    <h1>Register</h1>
+		<md-card-actions>
+			<form #newUserForm='ngForm' (ngSubmit)="OnSubmit()">
+				<div class="form-group">
+        			<label for="account_name">Account Name</label><br>
+        			<input id="account_name" name="account_name" class="form-control"
+               		required [(ngModel)]="newUser.account_name" #account_name="ngModel" >
+
+        			<div *ngIf="account_name.invalid && (account_name.dirty || account_name.touched)" class="alert alert-danger">
+
+          				<div *ngIf="account_name.errors.required">
+           				Name is required.
+         				</div>
+        			</div>
+        		</div><br>
+
+
+        		<div class="form-group">
+        			<label for="dsiplay_name">Display Name(optional)</label><br>
+        			<input id="display_name" name="display_name" class="form-control"
+              		[(ngModel)]="newUser.display_name" #display_name="ngModel" >
+        		</div><br>
+
+        		<div class="form-group">
+        			<label for="email_address">Email Address</label><br>
+        			<input id="email_address" name="email_address" class="form-control"
+		            placeholder="name@xxx.com" 
+               		required email
+               		[(ngModel)]="newUser.email_address" #email_address="ngModel" >
+
+        			<div *ngIf="email_address.invalid && (email_address.dirty || email_address.touched)" class="alert alert-danger">
+
+          				<div *ngIf="email_address.errors.required">
+            			Email address is required.
+          				</div>
+          				<div *ngIf="email_address.errors.email">
+            			Format is wrong.
+          				</div>
+        			</div>
+        		</div><br>
+
+        		<div class="form-group">
+        			<label for="phone_number">Phone Number</label><br>
+        			<input id="phone_number" name="phone_number" class="form-control"
+               		placeholder="123-123-1234"
+               		required pattern="\d{3}[-]\d{3}[-]\d{4}"
+               		[(ngModel)]="newUser.phone_number" #phone_number="ngModel" >
+
+        			<div *ngIf="phone_number.invalid && (phone_number.dirty || phone_number.touched)" class="alert alert-danger">
+
+          				<div *ngIf="phone_number.errors.required">
+            			Phone number is required.
+          				</div>
+          				<div *ngIf="phone_number.errors.pattern">
+            			Format is wrong.
+          				</div>
+        			</div>
+        		</div><br>
+
+				<div class="form-group">
+        			<label for="birth_date">Date of Birth</label><br>
+        			<input id="birth_date" name="birth_date" type="date" class="form-control"
+               		required Birthdate
+               		[(ngModel)]="newUser.birth_date" #birth_date="ngModel" >
+
+        			<div *ngIf="birth_date.invalid && (birth_date.dirty || birth_date.touched)" class="alert alert-danger">
+
+          				<div *ngIf="birth_date.errors.required">
+            			Birth date is required.
+          				</div>
+          				<div *ngIf="birth_date.errors.Birthdate">
+            			We only open registration for adults...
+          				</div>
+        			</div>
+        		</div><br>
+
+				<div class="form-group">
+        			<label for="zipcode">Zipcode</label><br>
+        			<input id="zipcode" name="zipcode" class="form-control"
+               		placeholder="77005"
+               		required pattern="^\d{5}"
+               		[(ngModel)]="newUser.zipcode" #zipcode="ngModel" >
+
+        			<div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)" class="alert alert-danger">
+
+          				<div *ngIf="zipcode.errors.required">
+            				Zipcode is required.
+          				</div>
+          				<div *ngIf="zipcode.errors.pattern">
+            			Format is wrong.
+          				</div>
+        			</div>
+        		</div><br>
+
+				<div class="form-group">
+        			<label for="password">Password</label><br>
+        			<input id="password" name="password" type="password" class="form-control"
+               		required [(ngModel)]="newUser.password" #password="ngModel" >
+
+        			<div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+
+          				<div *ngIf="password.errors.required">
+            			Password is required.
+          				</div>
+        			</div>
+        		</div><br>
+
+        		<div class="form-group">
+        			<label for="password_confirm">Password Confirmation</label><br>
+        			<input id="password_confirm" name="password_confirm" type="password" class="form-control"
+            	   required PasswordCheck
+            	   [(ngModel)]="newUser.password_confirm" #password_confirm="ngModel" >
+
+        			<div *ngIf="password_confirm.invalid && (password_confirm.dirty || password_confirm.touched)" class="alert alert-danger">
+
+          				<div *ngIf="password_confirm.errors.required">
+            			Password Confirmation is required.
+          				</div>
+          				<div *ngIf="password_confirm.errors.PasswordCheck">
+            			Confirmation should be same with password.
+          				</div>
+        			</div>
+        		</div><br>
+
+            <div *ngIf="(flag | async)" id="registerInfo">{{(flag | async)}}</div><br>
+
+				    <button type="submit" class="btn btn-default"
+              		[disabled]="newUserForm.invalid" id="submitRegister">Submit</button>
+      			<button type="button" class="btn btn-default"
+              		(click)="newUserForm.resetForm({})">Reset</button>
+			</form>
+		</md-card-actions>
+	</mat-card>
+  </div>
+
+  <div class="column">
+    <mat-card>
+      <h1>Login</h1>
+      <mat-card-actions>
+        <form #LoginForm='ngForm' (ngSubmit)="OnSubmit2()">
+        <div class="form-group">
+              <label for="user_name">User Name</label><br>
+              <input id="user_name" name="user_name" class="form-control"
+                  required  [(ngModel)]="newUser.account_name" #user_name="ngModel" >
+
+              <div *ngIf="user_name.invalid && (user_name.dirty || user_name.touched)" class="alert alert-danger">
+
+                  <div *ngIf="user_name.errors.required">
+                  User Name is required.
+                  </div>
+              </div>
+            </div><br>
+
+        <div class="form-group">
+              <label for="login_password">Password</label><br>
+              <input id="login_password" name="login_password" type="password" class="form-control"
+                  required  [(ngModel)]="newUser.password" #login_password="ngModel" >
+
+              <div *ngIf="login_password.invalid && (login_password.dirty || login_password.touched)" class="alert alert-danger">
+
+                  <div *ngIf="login_password.errors.required">
+                  Password is required.
+                  </div>
+              </div>
+            </div><br>
+
+            <div *ngIf="(error | async)" id="errorInfo">{{error | async}}</div><br>
+            <div *ngIf="(sucess | async)" id="successInfo">You successfully login!</div><br>
+            <button id="btnSubmit" type="submit" class="btn btn-default"
+                  [disabled]="LoginForm.invalid">Submit</button>
+            <button type="button" class="btn btn-default"
+                  (click)="LoginForm.resetForm({})">Reset</button>
+            <button type="button" class="btn btn-default" id="fb" (click)="loginByFB()">Login with Facebook</button>
+        </form>        
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
